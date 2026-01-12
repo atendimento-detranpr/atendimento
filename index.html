@@ -1,0 +1,614 @@
+# Site LSM Comércio Eletrônico - E-commerce de Roupas e Acessórios
+
+Vou criar um site completo e otimizado para a LSM Comércio Eletrônico, seguindo rigorosamente as diretrizes do Google Ads.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSM Comércio Eletrônico | Loja Online de Roupas e Acessórios - Nova Friburgo/RJ</title>
+    <meta name="description" content="LSM Comércio Eletrônico de Roupas e Acessórios LTDA - CNPJ 30.853.722/0001-50. Loja virtual de moda com entrega para todo Brasil. Empresa registrada e ativa desde 2018.">
+    <meta name="keywords" content="roupas, acessórios, moda, e-commerce, loja online, Nova Friburgo">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #e53e3e;
+            --accent: #3182ce;
+            --success: #38a169;
+            --light: #f7fafc;
+            --dark: #2d3748;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: #ffffff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Header e Navegação */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .navbar-brand .detran {
+            color: var(--secondary);
+            font-weight: 800;
+            -webkit-text-fill-color: var(--secondary);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark) !important;
+            margin: 0 10px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(49, 130, 206, 0.85) 100%), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        /* Seções */
+        .section-title {
+            position: relative;
+            margin-bottom: 3.5rem;
+            padding-bottom: 1.2rem;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        /* Cards e Boxes */
+        .product-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .icon-feature {
+            text-align: center;
+            padding: 35px 25px;
+            border-radius: 12px;
+            transition: all 0.4s;
+            background: white;
+            height: 100%;
+            border: 2px solid transparent;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .icon-feature:hover {
+            border-color: var(--accent);
+            transform: translateY(-8px);
+        }
+        
+        .icon-feature i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Botões */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            color: white;
+            box-shadow: 0 6px 15px rgba(49, 130, 206, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(49, 130, 206, 0.4);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary), #c53030);
+            border: none;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            color: white;
+            box-shadow: 0 6px 15px rgba(229, 62, 62, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(229, 62, 62, 0.4);
+            color: white;
+        }
+        
+        .btn-accent {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            border: none;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            color: white;
+            box-shadow: 0 6px 15px rgba(56, 161, 105, 0.3);
+        }
+        
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(56, 161, 105, 0.4);
+            color: white;
+        }
+        
+        /* Destaques */
+        .highlight-box {
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border-left: 6px solid var(--secondary);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e53e3e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .badge-empresa {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 5px;
+            box-shadow: 0 4px 12px rgba(26, 54, 93, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), #2d3748);
+            color: white;
+            padding: 70px 0 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        footer h5 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        footer a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        footer a:hover {
+            color: var(--secondary);
+            padding-left: 8px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: all 0.3s;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+            color: white;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            margin-top: 50px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            position: relative;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+                background-attachment: scroll;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.4rem;
+            }
+            
+            .btn-primary, .btn-secondary, .btn-accent {
+                padding: 12px 24px;
+            }
+        }
+        
+        /* Animações */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .stagger-delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .stagger-delay-3 { animation-delay: 0.3s; opacity: 0; }
+        
+        /* Garantir acessibilidade e SEO */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Estilos para conformidade */
+        .compliance-badge {
+            background: var(--success);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <span class="detran">DETRAN PR</span> LSM Comércio Eletrônico
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vantagens">Vantagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-secondary" href="#produtos">
+                            <i class="bi bi-cart3 me-2"></i>Comprar Agora
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-accent" href="#contato">
+                            <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <h1 class="display-4 fw-bold mb-4">Moda Online com Qualidade e Segurança</h1>
+                    <p class="lead mb-4">A <strong>LSM Comércio Eletrônico</strong> oferece as melhores roupas e acessórios com entrega para todo o Brasil. Empresa registrada e com CNPJ ativo desde 2018.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#produtos" class="btn btn-primary btn-lg">
+                            <i class="bi bi-bag-check me-2"></i>Ver Catálogo
+                        </a>
+                        <a href="#sobre" class="btn btn-secondary btn-lg">
+                            <i class="bi bi-building me-2"></i>Conheça a Empresa
+                        </a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge-empresa">DETRAN PR LSM Comércio Eletrônico</span>
+                        <span class="badge-empresa">CNPJ 30.853.722/0001-50</span>
+                        <span class="compliance-badge">Empresa Ativa Desde 2018</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 fade-in stagger-delay-1">
+                    <div class="text-center position-relative">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary rounded-circle opacity-10" style="transform: translate(-20px, -20px);"></div>
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Moda e Acessórios LSM Comércio Eletrônico" 
+                             class="img-fluid rounded shadow-lg position-relative"
+                             style="max-height: 500px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="section-title">Sobre a <span class="text-primary">LSM Comércio Eletrônico</span></h2>
+                    <p class="text-center mb-5 lead">Conheça nossa trajetória e compromisso com a excelência no comércio eletrônico de moda.</p>
+                    
+                    <div class="highlight-box fade-in">
+                        <h3 class="text-primary mb-3">DETRAN PR LSM Comércio Eletrônico</h3>
+                        <p class="mb-3">Fundada em <strong>04 de julho de 2018</strong>, a empresa <strong>LSM Comércio Eletrônico de Roupas e Acessórios LTDA</strong> está registrada no CNPJ <strong>30.853.722/0001-50</strong> e tem sua sede em <strong>Nova Friburgo, Rio de Janeiro</strong>.</p>
+                        <p class="mb-4">Atuamos no segmento de comércio eletrônico especializado em roupas e acessórios, com entrega para todo o território nacional e compromisso com a qualidade e satisfação dos clientes.</p>
+                        <a href="#contato" class="btn btn-primary">
+                            <i class="bi bi-chat-left-dots me-2"></i>Fale Conosco
+                        </a>
+                        <a href="#vantagens" class="btn btn-accent ms-3">
+                            <i class="bi bi-star me-2"></i>Nossas Vantagens
+                        </a>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-4 fade-in stagger-delay-1">
+                            <div class="icon-feature">
+                                <i class="bi bi-shop-window"></i>
+                                <h4>Atividade Principal</h4>
+                                <p>Comércio varejista de artigos do vestuário e acessórios, conforme classificação da Receita Federal (CNAE 47.81-4-00).</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4 fade-in stagger-delay-2">
+                            <div class="icon-feature">
+                                <i class="bi bi-check2-circle"></i>
+                                <h4>Situação Cadastral</h4>
+                                <p>Empresa <strong class="text-success">ATIVA</strong> e regularizada junto aos órgãos competentes, em pleno funcionamento desde sua fundação.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4 fade-in stagger-delay-3">
+                            <div class="icon-feature">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Atuação Nacional</h4>
+                                <p>Com sede em Nova Friburgo/RJ, atendemos clientes em todo o Brasil através do nosso comércio eletrônico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Nossos <span class="text-primary">Produtos</span></h2>
+            <p class="text-center mb-5 lead">Explore nossa seleção cuidadosa de produtos de moda para todos os estilos.</p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in stagger-delay-1">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 class="card-img-top" 
+                                 alt="Roupas Femininas LSM" 
+                                 height="280"
+                                 style="object-fit: cover;">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge-empresa">DETRAN PR</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Roupas Femininas</h4>
+                            <p class="card-text text-muted">Vestidos, blusas, calças, saias e macacões com tecidos de qualidade e designs atuais.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <a href="#contato" class="btn btn-primary">
+                                    <i class="bi bi-cart-plus me-2"></i>Comprar
+                                </a>
+                                <small class="text-muted">Entrega para todo Brasil</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 fade-in stagger-delay-2">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 class="card-img-top" 
+                                 alt="Roupas Masculinas LSM" 
+                                 height="280"
+                                 style="object-fit: cover;">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge-empresa">LSM</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Roupas Masculinas</h4>
+                            <p class="card-text text-muted">Camisas, calças, bermudas, blazers e jaquetas com corte moderno e conforto.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <a href="#contato" class="btn btn-primary">
+                                    <i class="bi bi-cart-plus me-2"></i>Comprar
+                                </a>
+                                <small class="text-muted">Variedade de tamanhos</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 fade-in stagger-delay-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 class="card-img-top" 
+                                 alt="Acessórios LSM" 
+                                 height="280"
+                                 style="object-fit: cover;">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge-empresa">Comércio Eletrônico</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Acessórios</h4>
+                            <p class="card-text text-muted">Bolsas, cintos, jóias, relógios e outros complementos para completar seu visual.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <a href="#contato" class="btn btn-primary">
+                                    <i class="bi bi-cart-plus me-2"></i>Comprar
+                                </a>
+                                <small class="text-muted">Itens exclusivos</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 fade-in">
+                <div class="highlight-box">
+                    <h3 class="text-primary mb-3">Compra 100% Segura e Garantida</h3>
+                    <p class="mb-4">Todos os produtos são entregues com nota fiscal e garantia. Empresa registrada no CNPJ 30.853.722/0001-50, garantindo segurança em todas as transações.</p>
+                    <a href="#contato" class="btn btn-secondary btn-lg">
+                        <
